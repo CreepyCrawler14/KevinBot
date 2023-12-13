@@ -1,4 +1,4 @@
-                                                       Introduction
+                                                   Introduction
 
 Hello, I am the creator of KevinBot.
 KevinBot is a chatbot built off of HTML and Javascript.
@@ -8,7 +8,7 @@ Please continue to use kevin as more updates come out.
 I will come out with a new update every saturday, if possible.
 Kevin is NOT an assistant, it is an experiement!
 
-                                                       How to run
+                                                    How to run
 
 git clone https://github.com/CreepyCrawler14/KevinBot.git
 
