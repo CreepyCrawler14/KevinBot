@@ -1,6 +1,6 @@
                                                    Introduction
 
-Hello, I am the creator of KevinBot.
+Hello, I am the creator of KevinBot for linux.
 KevinBot is a chatbot built off of HTML and Javascript.
 I wanted to create this chatbot to see if it was possible to make a chatbot using HTML and Javascript.
 As time goes on KevinBot will continue to get more advanced, it is not very advanced at the time of writing this.
