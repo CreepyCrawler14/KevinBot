@@ -15,3 +15,7 @@ git clone https://github.com/CreepyCrawler14/KevinBot.git
 cd KevinBot
 
 xdg-open Kevin_1-0.html
+
+                                                    Contact me
+
+For questions, concerns, or complaints, you can contact me at KevinBot@tutanota.com
