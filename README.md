@@ -19,3 +19,4 @@ xdg-open Kevin_1-0.html
                                                     Contact me
 
 For questions, concerns, or complaints, you can contact me via email at KevinBot@tutanota.com
+I will get back to you as soon as I can.
