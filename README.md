@@ -14,7 +14,7 @@ git clone https://github.com/CreepyCrawler14/KevinBot.git
 
 cd KevinBot
 
-xdg-open Kevin_1-0.html
+xdg-open Kevin_1-1.html
 
                                                     Contact me
 
