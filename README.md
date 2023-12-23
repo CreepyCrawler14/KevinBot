@@ -14,7 +14,7 @@ git clone https://github.com/CreepyCrawler14/KevinBot.git
 
 cd KevinBot
 
-xdg-open Kevin_1-1.html
+xdg-open Kevin_1-2.html
 
 Or you can just directly download the most recent version of KevinBot
 
