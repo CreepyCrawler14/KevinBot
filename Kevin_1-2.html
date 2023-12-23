@@ -157,7 +157,8 @@
 	"hey": "Hi there! Want to chat?",
 	"yes": "OK",
 	"bye": "Bye, I hope to speak with you some more!",
-	"hi": "Hi there! Want to chat?",
+	"why": "I'm sorry, but I do not know",
+  "hi": "Hi there! Want to chat?",
 	"OK": "Okay",
 	"no": "Okay, good bye",
 // All single-word statements go above this!!
@@ -180,24 +181,26 @@
   const chatContainer = document.getElementById('chat-container');
   const userInputField = document.getElementById('user-input');
 
-  function sendMessage() {
-    const userMessage = userInputField.value;
+function sendMessage() {
+  const userMessage = userInputField.value;
 
-    const userMessageElement = document.createElement('div');
-    userMessageElement.textContent = `You: ${userMessage}`;
-    chatContainer.appendChild(userMessageElement);
+  const userMessageElement = document.createElement('div');
+  userMessageElement.textContent = `You: ${userMessage}`;
+  userMessageElement.style.color = 'red'; // Set user input text color to red
+  chatContainer.appendChild(userMessageElement);
 
-    const botResponse = extendedChatbot.respond(userMessage);
-    const botResponseElement = document.createElement('div');
-    botResponseElement.textContent = `Kevin: ${botResponse}`;
-    chatContainer.appendChild(botResponseElement);
+  const botResponse = extendedChatbot.respond(userMessage);
+  const botResponseElement = document.createElement('div');
+  botResponseElement.textContent = `Kevin: ${botResponse}`;
+  botResponseElement.style.color = 'blue'; // Set bot response text color to blue
+  chatContainer.appendChild(botResponseElement);
 
-    // Clear input field
-    userInputField.value = '';
+  // Clear input field
+  userInputField.value = '';
 
-    // Scroll to the bottom of the chat container
-    chatContainer.scrollTop = chatContainer.scrollHeight;
-  }
+  // Scroll to the bottom of the chat container
+  chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
 
   // Add an event listener for the "Send" button
   const sendButton = document.getElementById('send-button');
