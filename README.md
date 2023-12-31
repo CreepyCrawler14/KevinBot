@@ -1,4 +1,4 @@
-# Introduction
+# Description
 
 KevinBot is a chatbot built off of HTML and Javascript.
 This chatbot was created to prove it was possible to make a chatbot using purely HTML and Javascript.
