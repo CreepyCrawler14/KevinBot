@@ -7,7 +7,7 @@ Please continue to use KevinBot as more updates come out.
 A new update will come out every saturday, if possible.
 Kevin is NOT an assistant, it is an experiement.
 
-# How to run
+# How To Run
 
 git clone https://github.com/CreepyCrawler14/KevinBot.git
 
@@ -17,7 +17,7 @@ xdg-open Kevin_1-2.html
 
 Or you can just directly download and run the most recent version of KevinBot
 
-# Contact me
+# Contact Information
 
-For questions, concerns, or complaints, you can contact me via email at KevinBot@tutanota.com.
-I will get back to you as soon as I can.
+For questions, concerns, or complaints, you can contact us via email at KevinBot@tutanota.com.
+We will get back to you as soon as I can.
