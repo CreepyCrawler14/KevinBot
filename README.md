@@ -6,6 +6,7 @@ As time goes on KevinBot will continue to get more advanced, it is not very adva
 Please continue to use KevinBot as more updates come out.
 A new update will come out every saturday, if possible.
 Kevin is NOT an assistant, it is an experiement.
+Note: This chatbot is not perfect, please contact us with any suggestions.
 
 # How To Run
 
