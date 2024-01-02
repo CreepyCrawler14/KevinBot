@@ -18,6 +18,8 @@ git clone https://github.com/CreepyCrawler14/KevinBot.git
 
 cd KevinBot
 
+apt install xdg-utils -y
+
 xdg-open Kevin_1-2.html
 
 Or you can just directly download and run the most recent version of KevinBot
