@@ -10,6 +10,7 @@ Kevin is NOT an assistant, it is an experiement.
 Note: This chatbot is not perfect, please contact us with any suggestions.
 
 # How To Run
+apt install git
 
 git clone https://github.com/CreepyCrawler14/KevinBot.git
 
