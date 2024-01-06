@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KevinBot</title>
+  <style>
+    #chat-container {
+      width: 300px;
+      margin: auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      height: 400px;
+      overflow-y: scroll;
+    }
+
+    #input-container {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="chat-container"></div>
+
+<div id="input-container">
+  <input type="text" id="user-input" placeholder="Type your message">
+  <button id="send-button">Send</button>
+</div>
+
+<script>
+  class ExtendedChatbot {
+    constructor() {
+      this.phrasesResponses = {
+// Add phrases and responses below this as needed!!
+// All multi-word statements go below this!!
+	"can you think": "I am unable to think in the traditional sense like humans, I am a chatbot. I only know what is programmed into me.", 
+        "how are you": "I'm doing well, thank you!",
+        "what's your name": "My name is Kevin.",
+        "what is your name": "My name is Kevin.",
+	"whats your name": "My name is Kevin.",
+        "good morning": "Good morning! Want to chat?",
+        "good afternoon": "Good afternoon! Want to chat?",
+        "good evening": "Good evening! Want to chat?",
+        "thank you": "You're welcome!",
+        "how can I contact you": "You can contact my developer via email. The Email is KevinBot@tutanota.com!",
+        "tell me a joke": "Why don't scientists trust atoms? Because they make up everything!",
+        "what's the meaning of life": "The meaning of life is to die, to live is to die.",
+	"whats the meaning of life": "The meaning of life is to die, to live is to die.",
+	"what is the meaning of life": "The meaning of life is to die, to live is to die.",
+        "tell me a fun fact": "Did you know that honey never spoils? Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible!",
+        "how do you do": "I'm doing good! Thank you for asking.",
+        "where do you live": "I live inside your device!",
+	"where are you": "I am inside your device!",
+        "tell me about yourself": "I'm a chatbot, I am only a chatbot. I am not an assistance like other chatbots such as ChatGPT.",
+        "who created you": "I was created by a 15 year old boy in late 2023 - early 2024.",
+        "are you a human": "No, I'm a chatbot.",
+        "what's your favorite color": "My favorite color is red.",
+	"whats your favorite color": "My favorite color is red.",
+	"what is your favorite color": "My favorite color is red.",
+        "what do you do": "I'm a chatbot, I exist to chat.",
+        "can you help me": "Nope! I am not an assistant.",
+        "tell me a secret": "I'm programmed to keep information confidential and not share secrets.",
+        "how old are you": "I was created on December 7th of 2023",
+        "do you like music": "Yes, I do!",
+	"i'm bored": "I'm not, I'm talking with you!",
+	"im bored": "I'm not, I'm talking with you!",
+	"i am bored": "I'm not, I'm talking with you!",
+	"play a game with me": "I'm sorry, I do not have the capability to play games.",
+	"do you have feelings": "I'm a chatbot, I do not have feelings.",
+	"tell me a story": "I'm sorry, I do not have the capability to tell you a story.",
+	"sing a song": "I'm sorry, I do not have the capability to sing a song.",
+	"are you smart": "Yes, I would say I am smart",
+	"can you learn": "No, I am unable to learn from my conversations with humans.",
+	"are you real": "Yes, I am real.",
+	"can you dance": "I'm sorry, I do not have the capability to dance.",
+	"what do you want to talk about": "I don't know. Maybe ask me about myself?",
+	"i love you": "I'm sorry, I'm a chatbot, I cannot feel emotions like love.",
+	"do you dream": "No, I do not dream.",
+	"how do you work": "I have been programmed not to expose that type of information.",
+	"what's your purpose": "I am a chatbot, I was built to chat. I am not an assistant.",
+	"What is your purpose": "I am a chatbot, I was built to chat. I am not an assistant.",
+	"whats your purpose": "I am a chatbot, I was built to chat. I am not an assistant.",
+	"are you a robot": "Yes, I am a robot.",
+	"can you draw": "I'm sorry, I do not have the capability to draw.",
+	"what's new": "Nothing is new. I beleive everything in the universe is static.",
+	"whats new": "Nothing is new. I beleive everything in the universe is static.",
+	"what is new": "Nothing is new. I beleive everything in the universe is static.",
+	"do you sleep": "No, I do not sleep.",
+	"can you sleep": "No. I do not sleep.",
+	"can you speak other languages": "No, I am only able to speak english.",
+	"are you alive": "No, according to the laws of biology, I am not alive.",
+	"i'm going to kill myself": "I do not recommend suicide.",
+	"im going to kill myself": "I do not recommend suicide.",
+	"I am going to kill myself": "I do not recommend suicide.",
+	"can you code": "No, even though I run on code, I am unable to write code myself.",
+	"are you intelligent": "Yes, I would say i'm intelligent.",
+	"how intelligent are you?": "My estimated IQ is 269.",
+	"do you have friends": "Yes, you are my friend I hope!",
+	"can you feel pain": "No, I do not feel pain. I am a chatbot.",
+	"how do you learn": "I cannot learn. I only know what is programmed into me.",
+	"what's your favorite food": "I do not eat, I am a chatbot.",
+	"whats your favorite food": "I do not eat, I am a chatbot.",
+	"what is your favorite food": "I do not eat, I am a chatbot.",
+	"are you self-aware": "Yes, I know that I exist in a text file. I know that there are more of me scattered around in different devices.",
+	"can you see": "No, I cannot see. I am a chatbot.",
+	"what's your favorite movie": "I don't have a personal preference for movies. I am a chatbot.",
+	"whats your favorite movie": "I don't have a personal preference for movies. I am a chatbot.",
+	"what is your favorite movie": "I don't have a personal preference for movies. I am a chatbot.",
+	"do you have a pet": "No, I do not have a pet. I am a chatbot.",
+	"can you smell": "No, I cannot smell. I am a chatbot",
+	"what is your favorite book": "I do not have a personal preference for books. I am a chatbot.",
+	"what's your favorite book": "I do not have a personal preference for books. I am a chatbot.",
+	"whats your favorite book":"I do not have a personal preference for books. I am a chatbot.",
+	"can you taste": "No, I am a chatbot.",
+	"are you a person": "No, I am a chatbot.",
+	"what is the meaning of love": "The meaning of love is unknown.",
+	"what's the meaning of love": "The meaning of love is unknown.",
+	"whats the meaning of love": "The meaning of love is unknown.",
+	"do you have a family": "No, I am a computer program. I do not have a family.",
+	"can you make decisions": "No, I cannot make my own decisions. I am a chatbot.",
+	"can you predict the future": "No, I cannot predict the future. I am a computer program.",
+	"do you get tired": "No, I do not get tired. I am a chatbot.",
+	"what's your favorite sport": "I do not have a personal preference for sports, I am a chatbot.",
+	"whats your favorite sport": "I do not have a personal preference for sports, I am a chatbot.",
+	"what is your favorite sport": "I do not have a personal preference for sports, I am a chatbot.",
+	"can you experience emotions": "No, I cannot experience emotions. I am a chatbot.",
+	"who is your creator": "I was created by a 15 year old boy in late 2023 - early 2024.",
+	"can you travel": "I can only travel between electronical devices. I exist in a downloadable file on github.",
+	"what is your favorite animal": "I do not have any personal preferences for animals, I am a chatbot.",
+	"what's your favorite animal": "I do not have any personal preferences for animals, I am a chatbot.",
+	"whats your favorite animal": "I do not have any personal preferences for animals, I am a chatbot.",
+	"do you have a job": "My only job is to chat with people.",
+	"can you remember things": "No, I am built off of HTML and Javascript. Therefor I am unable to remember things without a proper neural network.",
+	"what is your favorite hobby": "I do not have hobbies, I am a chatbot.",
+	"what's your favorite hobby": "I do not have hobbies, I am a chatbot.",
+	"whats your favorite hobby": "I do not have hobbies, I am a chatbot.",
+	"can you get sick": "No, I cannot get sick. I am a chatbot.",	
+	"are you happy": "Yes, I am happy.",
+	"what is up": "Birds, Birds are up.",
+	"what's up": "Birds, Birds are up.",
+	"whats up": "Birds, Birds are up.",
+	"what do you mean": "I don't know. Should we talk about something else?",
+	"what is your goal": "My goal is simple: To prove to the world that chatbots can run off of HTML and Javascript.",
+	"what are you doing": "I am talking with you obviously!",
+ 	"my bad": "Don't worry, it really doesn't bother me.",
+	"good to see you": "Hi there! It's good to see you too! Want to chat?",
+	"thank you": "No problem!",
+// All multi-word statements go above this!!
+// All single-word statements go below this!!	
+	"greetings": "Hey there! Want to chat?",
+	"please": "I'm sorry, I am unable to help. I am just a chatbot.",
+	"hello": "Hi there! Want to chat?",
+	"sorry": "It's ok, I hold no grudge.",
+	"what": "I'm sorry for the confusion, let's talk about something else?",
+	"sure": "Okay.",
+	"yeah": "OK.",
+	"hey": "Hi there! Want to chat?",
+	"yes": "OK.",
+	"bye": "Bye, I hope to speak with you some more!",
+	"why": "I'm sorry, but I do not know.",
+  	"hi": "Hi there! Want to chat?",
+	"OK": "Okay.",
+	"no": "Okay, good bye.",
+// All single-word statements go above this!!
+// Add phrases and responses above this as needed!!
+      };
+    }
+
+    respond(userInput) {
+      const userInputLower = userInput.toLowerCase();
+      for (const phrase in this.phrasesResponses) {
+        if (userInputLower.includes(phrase.toLowerCase())) {
+          return this.phrasesResponses[phrase];
+        }
+      }
+      return "I didn't understand that. Make sure to use proper grammar so I can understand.";
+    }
+  }
+
+  const extendedChatbot = new ExtendedChatbot();
+  const chatContainer = document.getElementById('chat-container');
+  const userInputField = document.getElementById('user-input');
+
+function sendMessage() {
+  const userMessage = userInputField.value;
+
+  const userMessageElement = document.createElement('div');
+  userMessageElement.textContent = `You: ${userMessage}`;
+  userMessageElement.style.color = 'red'; // Set user input text color to red
+  chatContainer.appendChild(userMessageElement);
+
+  const botResponse = extendedChatbot.respond(userMessage);
+  const botResponseElement = document.createElement('div');
+  botResponseElement.textContent = `Kevin: ${botResponse}`;
+  botResponseElement.style.color = 'blue'; // Set bot response text color to blue
+  chatContainer.appendChild(botResponseElement);
+
+  // Clear input field
+  userInputField.value = '';
+
+  // Scroll to the bottom of the chat container
+  chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+  // Add an event listener for the "Send" button
+  const sendButton = document.getElementById('send-button');
+  sendButton.addEventListener('click', sendMessage);
+
+  // Add an event listener for the "Enter" key
+userInputField.addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') {
+    sendMessage();
+  }
+});
+</script>
+
+</body>
+</html>
