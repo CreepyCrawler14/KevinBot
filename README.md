@@ -21,7 +21,7 @@ cd KevinBot
 
 apt install xdg-utils -y
 
-xdg-open Kevin_1-2.html
+xdg-open Kevin_1-3.html
 
 Or you can just directly download and run the most recent version of KevinBot
 
