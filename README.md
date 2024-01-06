@@ -28,4 +28,4 @@ Or you can just directly download and run the most recent version of KevinBot
 # Contact Information
 
 For questions, concerns, or complaints, you can contact us via email at KevinBot@tutanota.com.
-We will get back to you as soon as I can.
+We will get back to you as soon as we can.
