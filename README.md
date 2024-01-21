@@ -2,11 +2,8 @@
 
 KevinBot is a chatbot built off of HTML and Javascript.
 This chatbot was created to prove it was possible to make a chatbot using purely HTML and Javascript.
-As time goes on KevinBot will continue to get more advanced, it is not very advanced at the time of writing this.
-Please continue to use KevinBot as more updates come out.
-A new update will come out every saturday, if possible.
 Kevin is NOT an assistant, it is an experiement.
-Run all of the commands below in a linux terminal adding sudo permissions where required.
+Run all of the commands below in a linux terminal adding sudo permissions as required.
 
 Note: This chatbot is not perfect, please contact us with any suggestions.
 
@@ -23,7 +20,7 @@ apt install xdg-utils -y
 
 xdg-open Kevin_1-3.html
 
-Or you can just directly download and run the most recent version of KevinBot
+Or you can just directly download and run Kevin_1-3.html
 
 # Contact Information
 
