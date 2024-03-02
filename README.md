@@ -21,8 +21,3 @@ apt install xdg-utils -y
 xdg-open Kevin_1-3.html
 
 Or you can just directly download and run Kevin_1-3.html
-
-# Contact Information
-
-For questions, concerns, or complaints, you can contact us via email at KevinBot@tutanota.com.
-We will get back to you as soon as we can.
